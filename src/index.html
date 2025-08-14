@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+        <style>
+
+            /* Main */
+
+            body {
+                font-family: "Roboto", sans-serif;
+                background-color: #FAFBFC;
+                background-image: url('../../client-service/src/assets/bg.png');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: top;
+                color: #111827;
+            }
+
+            /* Text */
+
+            h1 {
+                font-size: 40px;
+                font-weight: 500;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            h4 {
+                font-size: 16px;
+                font-weight: 500;
+                color: #fff;
+            }
+
+            h5 {
+                color: #fff;
+                font-weight: 200;
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+                color: #6B7280;
+            }
+
+            a {
+                text-decoration: none;
+                color: #C4C4C4;
+            }
+
+            a:hover {
+                color: #8B5CF6;
+            }
+
+            span {
+                color: #fff;
+            }
+
+            /* Header */
+
+            header {
+                font-size: 14px;
+                margin-bottom: 173px;
+                
+            }
+
+            .nav-container {
+                display: flex;
+                top: 0;
+                left: 0;
+                right: 0;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-top: 27px;
+                margin-left: 48px;
+                margin-right: 48px;
+                padding: 18px 31px;
+                max-height: 81px;
+                border-radius: 8px;
+            }
+
+            .nav-menu {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+            }
+
+            .nav-item {
+                margin-left: 50px;
+            }
+
+            .logo-img {
+                width: 45px;
+                height: 45px;
+                margin-right: 243px;
+            }
+
+            .nav-buttons {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-left: 100px;
+                gap: 20px;
+            }
+
+            .logo-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            /* Main section */
+
+            main h1 {
+                color: #fff;
+            }
+
+            main p {
+                color: #C4C4C4;
+            }
+
+            .main-screen-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 28px;
+                margin-bottom: 283px;
+            }
+
+            .main-content-container {
+                text-align: center;
+            }
+
+            .text-input-container {
+                gap: 15px;
+            }
+
+            .text-input {
+                border: 1px solid #E5E7EB;
+                border-radius: 8px;
+                padding: 16px 14px;
+                margin-right: 15px;
+                font-size: 16px;
+                color: #989DA6;
+            }
+
+            input {
+                width: 443px;
+                transition: border 0.3s ease;
+            }
+
+            input:focus {
+                outline: none;
+                border: 2px solid #8B5CF6;
+            }
+
+            .star-icon {
+                background: none;
+                border-radius: 0;
+                width: 17px;
+                height: 17px;
+            }
+
+            .partners-image {
+                width: 29px;
+                height: 29px;
+                border: 0px;
+                border-radius: 100px;
+            }
+
+            .partners-image-big {
+                width: 43px;
+                height: 43px;
+                border: 0px;
+                border-radius: 100px;
+            }
+
+            .stars-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .partners-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .vertical-line {
+                border-left: 1px solid #D9D9D9;
+            }
+
+            .info-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            /* Buttons */
+
+            .main-button {
+                background-color: #8B5CF6;
+                color: #ffff;
+                border-radius: 8px;
+                border: none;
+                padding: 16px 14px;
+            }
+
+            .main-button:hover {
+                background-color: #713bef;
+            }
+
+            .second-button {
+                color: #C4C4C4;
+                text-decoration: none;
+            }
+
+            /* Info section */
+            .info-section-container {
+                margin-bottom: 153px;
+            }
+
+            .info-section {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 41px;
+            }
+
+            .info-block {
+                background-color: #ffff;
+                border-radius: 8px;
+                padding: 10px;
+                font-size: 16px;
+                height: 364px;
+                width: 267px;
+            }
+
+            .info-more {
+                color: #F5750D;
+            }
+
+            img {
+                background-color: #E0D5FC;
+                border: 0px;
+                border-radius: 8px;
+                width: 100%;
+                height: 194px;
+                object-fit: cover;
+            }
+
+            /* Description section */
+
+            .description-container {
+                padding-left: 278px;
+                padding-right: 278px;
+
+            }
+
+            .xray-image {
+                width: 262px;
+                height: 295px;
+            }
+
+
+
+            /* FAQ section */
+
+            .faq-section-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .faq-tag {
+                background-color: #E4DBFB;
+                border: 1px solid #8B5CF6;
+                border-radius: 8px;
+                padding: 5px 20px;
+                color: #8B5CF6;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="nav-container">
+                <div class="logo-container">
+                    <img class="logo-img" src="../../client-service/src/assets/logo.png">
+                    <h5 class="project-name">medixy</h5>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="../src/index.html">Главная</a></li>
+                    <li class="nav-item"><a href="../src/pages/diary.html">Дневник</a></li>
+                    <li class="nav-item"><a href="../src/pages/subsribtion.html">Подписка</a></li>
+                    <li class="nav-item"><a href="../src/pages/medications.html">Лекарства</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a class="second-button">Войти</a>
+                    <button class="main-button">Регистрация</button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="main-screen-container">
+                <div class="main-content-container">
+                    <h1>Твой медицинский <span>ИИ-консультант</span></h1>
+                    <p>Получите моментальную консультацию по вашим симптомам с помощью<br>
+                    нашего ИИ-ассистента. Точные ответы, персонализированные<br>
+                    рекомендации и круглосуточная поддержка.</p>
+                    <div class="text-input-container">
+                        <input class="text-input" placeholder="Опишите ваши симптомы...">
+                        <button class="main-button">Спросить</button>
+                    </div>
+                </div>
+                <div class="info-container">
+                    <div class="partners-container">
+                        <h4>Партнеры</h4>
+                        <div class="partners">
+                            <img class="partners-image">
+                            <img class="partners-image-big">
+                            <img class="partners-image">
+                        </div>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="stars-container">
+                        <h4>Рейтинг</h4>
+                        <div class="stars">
+                            <img class="star-icon" src="../src/assets/star.svg">
+                            <img class="star-icon" src="../src/assets/star.svg">
+                            <img class="star-icon" src="../src/assets/star.svg">
+                            <img class="star-icon" src="../src/assets/star.svg">
+                            <img class="star-icon" src="../src/assets/star.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        </main>
+
+        <section class="info-section-container">
+
+            <div class="info-section">
+                <div class="info-block">
+                    <img src="../src/assets/1.png">
+                    <h3>Анализ симптомов</h3>
+                    <p>Получите предварительную оценку вашего состояния на основе введенных симптомов</p>
+                    <p class="info-more">Подробнее</p>
+                
+                </div>
+
+                <div class="info-block">
+                    <img src="../src/assets/8.png">
+                    <h3>Дневник здоровья</h3>
+                    <p>Систематически отслеживайте показатели здоровья и самочувствия</p>
+                    <p class="info-more">Подробнее</p>
+                
+                </div>
+
+                <div class="info-block">
+                    <img src="../src/assets/2.png">
+                    <h3>Проверка лекарств</h3>
+                    <p>Узнайте о взаимодействиях препаратов и возможных побочных эффектах</p>
+                    <p class="info-more">Подробнее</p>
+                
+                </div>
+            </div>
+
+        </section>
+
+        <section class="description-container">
+            <img class="xray-image" src="../../client-service/src/assets/umanoide-nYTeLW-RiyU-unsplash.png">
+            <div>
+                <h2>Как это работает?</h2>
+                <p>Опишите проблему – напишите симптомы или задайте вопрос.</p>
+                <p>Получите анализ – ИИ проверит данные, проанализирует медицинские источники и даст понятный ответ.</p>
+                <p>Следующие шаги – рекомендации и советы, как действовать дальше.</p>
+            </div>
+        </section>
+
+
+        <section class="faq-section-container">
+
+            <div class="faq-section">
+                <div class="question">
+                    <h2 id="question">Что умеет медицинский ассистент?</h2>
+                    <p id="answer">Помогает с симптомами, дает общие рекомендации, напоминает о приеме лекарств, но не заменяет врача.</p>
+                </div>
+
+                <div class="question">
+                    <h2 id="question">Как пользоваться ассистентом?</h2>
+                    <p id="answer">Просто введите вопрос (например, "Что делать при высокой температуре?") или выберите тему из меню.</p>
+                </div>
+
+                <div class="question">
+                    <h2 id="question">Насколько точны ответы ассистента?</h2>
+                    <p id="answer">Ответы основаны на проверенных медицинских источниках, но для диагноза и лечения всегда консультируйтесь с врачом.</p>
+                </div>
+
+                <div class="question">
+                    <h2 id="question">Хранятся ли мои данные?</h2>
+                    <p id="answer">Нет, мы не сохраняем ваши персональные данные и историю обращений.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <div class="line"></div>
+        </footer>
+
+    </body>
+
+    <script>
+        document.getElementById("question").addEventListener("click", revealAnswer);
+
+        function revealAnswer() {
+
+        }
+    </script>
+</html>
