@@ -1,0 +1,228 @@
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+.mobile-nav {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+body {
+    padding: 0 40px;
+    margin: 0;
+}
+
+}
+
+@media (max-width: 900px) {
+    .nav-container {
+        position: relative;
+        position: fixed;
+        padding: 15px 20px;
+        justify-content: space-between;
+        margin: 15px 40px 0 40px;
+    }
+
+    .mobile-menu {
+        display: block;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
+
+    header .nav-menu,
+    header .nav-buttons {
+        display: none;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        z-index: 1;
+        top: 70px;
+        left: 40px;
+        right: 40px;
+        top: 140px;
+    
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 20px;
+        border-radius: 16px;
+    
+        background: rgba(17, 17, 18, 0.7);
+        backdrop-filter: blur(13.3px);
+        -webkit-backdrop-filter: blur(13.3px);
+    
+        border: 1px solid #353536;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .mobile-nav.active {
+        display: flex;
+    }
+
+    .mobile-nav .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .mobile-nav a {
+        font-size: 18px;
+    }
+
+    .mobile-nav .mobile-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .info-section-container,
+    .description-section-container,
+    .about-screen-container,
+    .inovation-section-container {
+        flex-direction: column;
+        text-align: left;
+        gap: 30px;
+    }
+
+    .info-section-container img,
+    .description-section-container img,
+    .about-screen-container img,
+    .inovation-section-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .description-container,
+    .about-page-description {
+        text-align: left;
+    }
+
+    .step-container {
+        flex-direction: column;
+        align-items: left;
+        text-align: left;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: left;
+        gap: 30px;
+    }
+
+    .footer-nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-nav-container ul {
+        text-align: center;
+        padding: 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+    body.chat-page {
+        padding: 0;
+    }
+
+    .chat-sidebar {
+        width: 220px;
+        padding: 20px;
+    }
+
+    .chat-main-section {
+        margin-left: 220px;
+        padding: 20px;
+    }
+
+    .chat-sidebar {
+        display: none;
+    }
+
+    .chat-main-section {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .form-section-container {
+        padding: 0 20px;
+    }
+
+    .form-section-container h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .form-section-container p.form-text {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .form-input-container {
+        width: 100%;
+    }
+
+    .form-input-container input,
+    .form-input-container textarea {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .agreement-container {
+        font-size: 12px;
+    }
+
+    .main-button {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .faq-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .faq-promo-block {
+        width: 100%;
+        height: auto;
+    }
+
+    .question-btn {
+        width: 100%;
+    }
+
+    .table-section-container {
+        display: none;
+    }
+}
+

@@ -1,0 +1,1187 @@
+/* ===========================================
+   SECTIONS.CSS
+   Все секционные стили (главная, информация, описание, футер)
+   =========================================== */
+
+/* ===========================================
+   MAIN SECTION
+   =========================================== */
+
+body.main-page {
+    background-image: 
+        url('../assets/background.png'),
+        url('../assets/footer.png');
+    background-repeat: 
+        no-repeat,
+        no-repeat;
+    background-size: 
+        100%,
+        100%;
+    background-position: 
+        top,
+        bottom;
+}
+
+.main-screen-container {
+    display: flex; 
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    margin-top: 290px;
+    margin-bottom: 283px;
+}
+
+
+.main-screen-container p {
+    margin-bottom: 25px;
+    max-width: 573px;
+}
+
+.main-content-container {
+    text-align: center;
+}
+
+.text-input {
+    flex: 1;
+    background-color: #181819;
+    border: 1px solid #353536;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+    border-radius: 8px;
+    padding: 16px 14px;
+    font-size: 16px;
+    color: #989DA6;
+    width: 100%;
+}
+
+.text-input-container {
+    display: flex;
+    gap: 15px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.text-input-container .text-input {
+    flex: 1 1 auto;
+    min-width: 0; /* важно для флексов, чтобы не вылазило */
+    max-width: calc(100% - 150px - 15px); /* учитываем кнопку и gap */
+    box-sizing: border-box;
+}
+
+
+.text-input-container .main-button {
+    flex: 0 0 150px;  /* фиксированная ширина */
+}
+
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--main-color);
+}
+
+.star-icon {
+    background: none;
+    border: none;
+    border-radius: 0;
+    width: 17px;
+    height: 17px;
+}
+
+.partners-image {
+    width: 29px;
+    height: 29px;
+    border: 0px;
+    border-radius: 100px;
+}
+
+.partners-image-big {
+    width: 43px;
+    height: 43px;
+    border: 0px;
+    border-radius: 100px;
+}
+
+.vertical-line {
+    background: linear-gradient(to bottom, rgba(152, 117, 232), rgba(152, 117, 232, 0.2));
+    width: 1px;
+    height: 48px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-info-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 65px;
+}
+
+.main-info-text p {
+    color: #9673E5;
+}
+
+.main-info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ===========================================
+   INFO SECTION
+   =========================================== */
+
+.info-section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 63px;
+    margin-bottom: 160px;
+}
+
+.info-section-container button {
+    margin-top: 13px;
+}
+
+.info-text {
+    margin-bottom: 23px;
+    max-width: 400px;
+}
+
+.advantages-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 10px;
+    gap: 5px;
+}
+
+.advantages-list p {
+    color: #fff;
+}
+
+.advantages-list img.done-icon {
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+    object-fit: contain;
+    display: block;
+}
+
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    background:
+        linear-gradient(#312C3E, #2A2140) padding-box,
+        linear-gradient(#6749AD, #372858) border-box;
+    font-size: 12px;
+    color: var(--main-color);
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.tag-orange {
+    display: inline-flex;
+    align-items: center;
+    background:
+        linear-gradient(#5D422C, #463222) padding-box,
+        linear-gradient(#B95F1F, #5A3920) border-box;
+    font-size: 12px;
+    color: #F97316;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.health-care-img {
+    height: auto;     
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid #353536;
+    border-radius: 8px;
+}
+
+/* ===========================================
+   DESCRIPTION SECTION
+   =========================================== */
+
+.description-section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 120px;
+}
+
+.description-text {
+    margin-bottom: 35px;
+}
+
+.step-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: top;   
+    margin-bottom: 47px;        
+}
+
+.phone-img {
+    height: 496px;
+    width: 460px;
+    border: none;
+    background: none;
+}
+
+.step-img {
+    background: #181819;
+    padding: 20px;
+    border-radius: 8px;
+    border: 0px;
+    max-width: 20px;
+    max-height: 19px;
+}
+
+.step-text h2 {
+    margin-bottom: 15px;
+}
+
+/* ===========================================
+   PRODUCT SECTION
+   =========================================== */
+
+.product-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    text-align: left;
+    margin: 160px auto;
+}
+
+
+.product-img-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch; 
+    flex-wrap: wrap;
+}
+
+
+.horizontal-img-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+
+.reasons-photo {
+    border: 1px solid #353536;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 20px 20px 20px;
+    color: #fff;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.4;
+    background-size: cover;
+    background-position: center;
+}
+
+.reasons-photo.first {
+    height: 232px;
+    background-image: url('../assets/product-section-photo1.png');
+}
+
+.reasons-photo.second {
+    height: 264px;
+    background-image: url('../assets/product-section-photo2.png');
+}
+
+.reasons-photo.third {
+    flex: 1;
+    min-height: 516px;
+    background-image: url('../assets/product-section-photo3.png');
+}
+
+/* ===========================================
+   GOAL SECTION
+   =========================================== */
+
+.goal-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 172px 0 170px 0;
+}
+
+.goal-text {
+    justify-content: center;
+    text-align: center;
+}
+
+.goal-logo-img {
+    width: 77px;
+    height: 77px;
+    background: none;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+
+.goal-line-img {
+    width: 552px;
+    height: 100%;
+    background: none;
+    border: none;
+    border-radius: 0;
+    margin-top: 60px;
+}
+
+/* ===========================================
+   FOOTER SECTION
+   =========================================== */
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.footer-nav-container {
+    display: flex;
+    flex-direction: row;
+    gap: 139px;
+}
+
+footer {
+    padding-top: 165px;
+    padding-bottom: 30px;
+}
+
+.footer-text {
+    text-align: center;
+    margin: 265px 0 0 0; /* 265 + 15 = 280px */
+}
+
+.logo-description {
+    max-width: 275px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+footer ul {
+    text-align: right;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.footer-header {
+    color: #fff;
+}
+
+/* ===========================================
+   POSSIBILITIES SECTION 
+   =========================================== */
+
+.possibilities-header {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    top: 42%;
+}
+
+.possibilities-section-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 60px;
+    gap: 40px;
+    margin: 170px 0 160px 0;
+}
+
+/* ===========================================
+   ABOUT SECTION
+   =========================================== */
+
+.about-screen-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 181px 0 174px 0;
+}
+
+.about-page-description {
+    margin-bottom: 20px;
+    max-width: 545px;
+}
+
+.about-page-statistic-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    gap: 35px;
+}
+
+.about-page-statistic-section h3 {
+    margin: 9px 0 9px 0;
+}
+
+.statistic-icon {
+    background: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
+.line {
+    border-left: 1px solid #323232; 
+}
+
+.circle-background {
+    position: relative;
+    width: 652px;
+    height: 598px;
+    background-image: url('../assets/circle-photo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.circle-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/circle-photo-hover.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.circle-background.hovered::after {
+    opacity: 1;
+}
+
+.phone-img2 {
+    position: relative;
+    width: 652px;
+    height: 598px;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.phone-img2:hover {
+    transform: translateY(-40px);
+}
+
+
+/* ===========================================
+   MEDIXY PHOTO SECTION
+   =========================================== */
+
+.medixy-photo {
+    width: 100%;
+    border: 1px solid #353536;
+    border-radius: 8px;
+    margin-bottom: 160px;
+}
+
+/* ===========================================
+   MEDIXY PHOTO SECTION
+   =========================================== */
+
+.gradient-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    tex-align: center;
+    height: 407px;
+    background: linear-gradient( #111112, #8A38F5);
+    border-radius: 8px;
+}
+
+
+/* ===========================================
+   INOVATION PHOTO SECTION
+   =========================================== */
+
+.inovation-section-container {
+    display: flex;
+    flex-direction: row;
+    margin: 160px 0 160px 0;
+}
+
+/* ===========================================
+   CHAT SECTION
+   =========================================== */
+
+body .chat-page {
+    padding: 0 307px 0 130px;
+}
+
+.chat-main-section {
+    margin-left: 304px;
+}
+
+.chat-sidebar {
+    background: #161618;
+    position: fixed;
+    padding: 40px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+}
+
+.chat-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-nav ul {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* ===========================================
+   CHAT PAGE
+   =========================================== */
+
+body.chat-page {
+    background-color: #111112;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.chat-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.chat-sidebar {
+    background: #161618;
+    width: 280px;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    border-right: 1px solid #353536;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.main-button chat {
+    width: 30px;
+    height: 24px;
+}
+
+.sidebar-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #9AA1AF;
+    letter-spacing: 0.5px;
+}
+
+.chat-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-sidebar::-webkit-scrollbar-thumb {
+    background-color: #8B5CF6;
+    border-radius: 3px;
+}
+
+.chat-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.project-name {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.chat-history {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 30px;
+}
+
+.services-nav ul {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin: 0 0 126px 0;
+}
+
+.services-nav li {
+    list-style: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 15px 10px;
+    margin: 0;
+    transition: all 0.2s ease;
+}
+
+.services-nav li:hover {
+    background: #1D1D1F;
+}
+
+.chat-main-section {
+    margin-left: 350px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px 40px;
+    background: #111112;
+}
+
+.chat-page .logo-container {
+    margin-bottom: 40px;
+}
+
+.chat-page .horizontal-line {
+}
+
+.messages-container {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.messages-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+    background-color: #8B5CF6;
+    border-radius: 3px;
+}
+
+.message {
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 16px;
+    position: relative;
+    font-size: 16px;
+    line-height: 22px;
+    word-wrap: break-word;
+}
+
+.message.ai-message {
+    background: #2C2B30;
+    align-self: flex-start;
+    border-radius: 16px 16px 16px 0;
+}
+
+.message.user-message {
+    background: linear-gradient(90deg, #8B5CF6, #7C3AED);
+    align-self: flex-end;
+    border-radius: 16px 16px 0 16px;
+    color: #fff;
+}
+
+.message-time {
+    font-size: 12px;
+    color: #9AA1AF;
+    margin-top: 6px;
+    text-align: right;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: #181819;
+    border: 1px solid #353536;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.chat-input:focus {
+    outline: none;
+    border: 2px solid #8B5CF6;
+}
+
+.welcome-screen {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #9AA1AF;
+    gap: 20px;
+}
+
+.welcome-screen h2 {
+    color: #fff;
+}
+
+.welcome-img {
+    width: 200px;
+    opacity: 0.9;
+}
+
+
+/* =============================
+   SUBSCRIPTION PAGE
+   ============================= */
+
+.subscription-header {
+    text-align: center;
+    margin: 260px 0 45px 0;
+}
+
+.subscription-header h1 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.subscription-header p {
+    font-size: 18px;
+    color: #9AA1AF;
+}
+
+.price-plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+.price-plan {
+    position: relative;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: left;
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #111; 
+    overflow: hidden;
+}
+
+.price-plan::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px; /* обводка */
+    background: linear-gradient(180deg, rgba(50, 50, 50, 0.6), rgba(50, 50, 50, 0));
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+}
+
+
+.price-plan.popular::before {
+    background: linear-gradient(180deg, rgba(139, 92, 246, 0.9), rgba(139, 92, 246, 0));
+}
+
+
+.price-plan button {
+    width: 100%;
+}
+
+.price-plan.popular {
+    border-image: linear-gradient(180deg, rgba(139, 92, 246, 0.9), rgba(139, 92, 246, 0)) 1;
+    background: linear-gradient(180deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0));
+    transform: scale(1.05);
+}
+
+.price-plan h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.price-plan ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.price-plan ul li {
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #9AA1AF;
+}
+
+.price-plan:hover {
+    transform: scale(1.05);
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+}
+
+.price-container .tag {
+    font-size: 12px;
+    padding: 5px 10px;
+    border: none;
+    color: #CFCFCF;
+}
+
+.price {
+    font-size: 40px;
+    font-weight: 500;
+    margin-right: 10px;
+    color: #fff;
+}
+
+/* ==============================
+   TABLE
+   ============================== */
+.table-section-container {
+    display: flex;
+    justify-content: center;
+    margin: 170px 0 170px 0;
+}
+
+.table-section-container table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table-section-container th,
+.table-section-container td {
+    border: none;
+    padding: 25px 20px;
+    font-size: 16px;
+}
+
+.table-section-container th.popular-column,
+.table-section-container td:nth-child(3) {
+    background-color: #171719 !important;
+    color: #fff;
+    font-weight: 500;
+}
+
+.plan-header h3 {
+    margin: 0 0 8px 0;
+}
+
+.plan-header p {
+    margin: 0 0 12px 0;
+    font-weight: 500;
+    font-size: 18px;
+    color: inherit;
+}
+
+.plan-header .main-button {
+    min-width: 120px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+
+/* =====================
+   PROFILE (внизу сайдбара)
+   ===================== */
+.profile-container {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #8B5CF6;
+    flex-shrink: 0;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.functions {
+    text-align: left;
+}
+
+/* ==========================
+   DIARY PAGE
+   ========================== */
+
+   body.diary-page {
+    background: #111112;
+    color: #fff;
+    font-family: 'Urbanist', sans-serif;
+  }
+  
+  .diary-main-section {
+    margin-left: 350px;
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .diary-form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .diary-date {
+    background: #181819;
+    border: 1px solid #353536;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  .diary-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .diary-entry {
+    background: #161618;
+    border: 1px solid #2e2e32;
+    border-radius: 12px;
+    padding: 16px 20px;
+    transition: transform 0.2s ease;
+  }
+  
+  .diary-entry:hover {
+    transform: translateY(-2px);
+    border-color: #8B5CF6;
+  }
+  
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #9AA1AF;
+  }
+  
+/* ===========================================
+   MEDICINES PAGE
+   =========================================== */
+
+.medicines-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.medicine-item {
+    background: #161618;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 1px solid #2e2e32;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+}
+
+.medicine-item:hover {
+    transform: translateY(-2px);
+    border-color: #8B5CF6;
+}
+
+.medicine-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #161618;
+    border: 1px solid #2e2e32;
+    border-radius: 12px;
+    padding: 16px 20px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    gap: 20px;
+}
+
+.medicine-card:hover {
+    transform: translateY(-2px);
+    border-color: #8B5CF6;
+}
+
+.medicine-info h2 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: #fff;
+}
+
+.medicine-info p {
+    font-size: 14px;
+    color: #9AA1AF;
+    margin: 0;
+}
+
+.medicine-card .main-button {
+    min-width: 120px;
+    height: 40px;
+    padding: 10px 14px;
+    font-size: 14px;
+}
+
+/* ===========================================
+   REGISTER PAGE
+   =========================================== */
+
+body.register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/background_login.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+}
+
+
+body.register-page .register-box {
+    background: rgba(17, 17, 18, 0.75);
+    border: 1px solid #353536;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.3px);
+    -webkit-backdrop-filter: blur(13.3px);
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+
+body.register-page .register-form {
+    max-width: 460px;
+}
+
+body.register-page .register-form button{
+    width: 100%;
+}
+
+.text-input.input-error {
+    border: 2px solid #FF5A5F; /* красный цвет для ошибки */
+}
+
+.error-message {
+    color: #FF5A5F;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+
+/* ===========================================
+   LOGIN PAGE
+   =========================================== */
+
+body.login-page {
+    background-image: url('../assets/background_login.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+}
+
+body.login-page .form-input-container input.text-input {
+    width: 100%;
+}
+
+body.login-page .login-form {
+    max-width: 460px;
+}
+
+body.login-page .login-form button{
+    width: 100%;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.login-page .login-box {
+    background: rgba(17, 17, 18, 0.75);
+    border: 1px solid #353536;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.3px);
+    -webkit-backdrop-filter: blur(13.3px);
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    margin-top: 200px;
+}

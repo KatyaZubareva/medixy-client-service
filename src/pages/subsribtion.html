@@ -3,257 +3,221 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Medixy | Подписка</title>
+        
+        <!-- БАЗОВЫЕ НАСТРОЙКИ И ШРИФТЫ -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <style>
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-            /* Main */
+        <!-- СТИЛИ -->
+        <!-- Базовые стили -->
+        <link rel="stylesheet" type="text/css" href="../css/global.css">
+        
+        <!-- Компоненты -->
+        <link rel="stylesheet" type="text/css" href="../css/components.css">
+        
+        <!-- Секции -->
+        <link rel="stylesheet" type="text/css" href="../css/sections.css">
+        
+        <!-- Адаптивность -->
+        <link rel="stylesheet" type="text/css" href="../css/media.css">
 
-            body {
-                font-family: "Roboto", sans-serif;
-                background-color: #FAFBFC;
-                background-image: url('../../client-service/src/assets/bg.png');
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: top;
-                color: #111827;
-            }
-
-            /* Text */
-
-            h1 {
-                font-size: 40px;
-            }
-
-            h3 {
-                font-size: 16px;
-            }
-
-            h5 {
-                color: #E6E7E8;
-                font-size: 400px;
-                bottom: 0;
-            }
-
-            p {
-                font-size: 16px;
-                color: #6B7280;
-            }
-
-            a {
-                text-decoration: none;
-                color: #fff;
-            }
-
-            a:hover {
-                color: #8B5CF6;
-            }
-
-            span {
-                color: #fff;
-            }
-
-            /* Header */
-
-            header {
-                font-size: 14px;
-                margin-bottom: 173px;
-                
-            }
-
-            .nav-container {
-                display: flex;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                margin-top: 27px;
-                margin-left: 48px;
-                margin-right: 48px;
-                padding: 18px 31px;
-                max-height: 81px;
-                border-radius: 8px;
-            }
-
-            .nav-menu {
-                display: flex;
-                justify-content: space-between;
-                list-style: none;
-            }
-
-            .nav-item {
-                margin-left: 50px;
-            }
-
-            .logo-img {
-                width: 45px;
-                height: 45px;
-                margin-right: 243px;
-            }
-
-            .nav-buttons {
-                display: flex;
-                flex-direction: row;
-                margin-left: 100px;
-                gap: 20px;
-            }
-
-            /* Main section */
-
-            main p, h1 {
-                color: #fff;
-            }
-
-            .main-screen-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 28px;
-                margin-bottom: 283px;
-            }
-
-            .main-content-container {
-                text-align: center;
-            }
-
-            .text-input-container {
-                gap: 15px;
-            }
-
-            .text-input {
-                border: 1px solid #E5E7EB;
-                border-radius: 8px;
-                padding: 16px 14px;
-                margin-right: 15px;
-                font-size: 16px;
-                color: #989DA6;
-            }
-
-            input {
-                width: 443px;
-                transition: border 0.3s ease;
-            }
-
-            input:focus {
-                outline: none;
-                border: 2px solid #8B5CF6;
-            }
-
-            /* Buttons */
-
-            .main-button {
-                background-color: #8B5CF6;
-                color: #ffff;
-                border-radius: 8px;
-                border: none;
-                padding: 16px 14px;
-            }
-
-            .main-button:hover {
-                background-color: #713bef;
-            }
-
-            .second-button {
-                border-radius: 8px;
-                border: 1px solid #ECECEC;
-                background-color: #ffff;
-                padding: 16px 14px;
-            }
-
-            /* Info section */
-            .info-section-container {
-                margin-bottom: 153px;
-            }
-
-            .info-section {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                gap: 41px;
-            }
-
-            .info-block {
-                background-color: #ffff;
-                border-radius: 8px;
-                padding: 10px;
-                font-size: 16px;
-                height: 364px;
-                width: 267px;
-            }
-
-            .info-more {
-                color: #F5750D;
-            }
-
-            img {
-                background-color: #E0D5FC;
-                border: 0px;
-                border-radius: 8px;
-                width: 100%;
-                height: 194px;
-                object-fit: cover;
-            }
-
-            /* FAQ section */
-
-            .faq-section-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .faq-tag {
-                background-color: #E4DBFB;
-                border: 1px solid #8B5CF6;
-                border-radius: 8px;
-                padding: 5px 20px;
-                color: #8B5CF6;
-            }
-        </style>
+        <!-- СКРИПТЫ -->
+        <!-- Главный скрипт приложения -->
+        <script src="../js/main.js" defer></script>
     </head>
     <body>
         <header>
             <nav class="nav-container">
                 <div class="logo-container">
                     <img class="logo-img" src="../assets/logo.png">
+                    <h5 class="project-name">medixy</h5>
                 </div>
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="../src/index.html">Главная</a></li>
-                    <li class="nav-item"><a href="../src/pages/diary.html">Дневник</a></li>
-                    <li class="nav-item"><a href="../src/pages/subsribtion.html">Подписка</a></li>
-                    <li class="nav-item"><a href="../src/pages/medications.html">Лекарства</a></li>
+                    <li class="nav-item"><a href="../index.html">Главная</a></li>
+                    <li class="nav-item"><a href="../pages/about.html">О нас</a></li>
+                    <li class="nav-item"><a href="../pages/possibilities.html">Возможности</a></li>
+                    <li class="nav-item"><a href="../pages/subsribtion.html" class="active">Подписка</a></li>
                 </ul>
                 <div class="nav-buttons">
-                    <button class="second-button">Регистрация</button>
-                    <button class="main-button">Вход</button>
+                    <a href="../pages/login.html" class="second-button">Войти</a>
+                    <button class="main-button">Регистрация</button>
                 </div>
             </nav>
         </header>
 
         <main>
+            <section class="subscription-header">
+                <div class="tag about-product">ПОДПИСКА</div>
+                <h1>Выберите подходящий план</h1>
+                <p>Наш медицинский ИИ-ассистент и команда поддержки всегда готовы<br>помочь вам: уточнить функции, подсказать, какой тариф подходит именно<br>вам, и ответить на любые вопросы о здоровье.</p>
+            </section>
         
-
+            <section class="price-plans-container">
+                <!-- План 1 -->
+                <div class="price-plan">
+                    <h2>Базовый</h2>
+                    <p class="price-container"><span class="price">0</span> <span class="tag">₽/мес</span></p>
+                    <p>Для тех, кто хочет попробовать</p>
+                    <button class="main-button">Начать</button>
+                    <div class="horizontal-line"></div>
+                    <div class="advantages-list"><p>Функции</p></div>
+                    <div class="advantages-list"><img src="../assets/done_icon.svg" class="done-icon"><p>ИИ-чат (до 10 запросов/день)</p></div>
+                    <div class="advantages-list"><img src="../assets/done_icon.svg" class="done-icon"><p>Дневник здоровья (50 записей/мес)</p></div>
+                    <div class="advantages-list"><img src="../assets/done_icon.svg" class="done-icon"><p>Напоминания о 2 препаратах</p></div>
+                    <div class="advantages-list"><img src="../assets/done_icon.svg" class="done-icon"><p>Базовая статистика</p></div>
+                </div>
+        
+                <!-- План 2 - Популярный -->
+                <div class="price-plan popular">
+                    <h2>Стандарт</h2>
+                    <p class="price-container"><span class="price">299</span>  <span class="tag">₽/мес</span></p>
+                    <p>Для регулярного использования</p>
+                    <button class="main-button">Начать</button>
+                    <div class="horizontal-line"></div>
+                    <div class="advantages-list"><p>Функции</p></div>
+                    <div class="advantages-list"><img src="../assets/done_icon.svg" class="done-icon"><p>Безлимитный ИИ-чат</p></div>
+                    <div class="advantages-list"><img src="../assets/done_icon.svg" class="done-icon"><p>Неограниченный дневник здоровья</p></div>
+                    <div class="advantages-list"><img src="../assets/done_icon.svg" class="done-icon"><p>Напоминания о 10 препаратах</p></div>
+                    <div class="advantages-list"><img src="../assets/done_icon.svg" class="done-icon"><p>Расширенная статистика и графики</p></div>
+                    <div class="advantages-list"><img src="../assets/done_icon.svg" class="done-icon"><p>Персонализированные советы</p></div>
+                </div>
+        
+                <!-- План 3 -->
+                <div class="price-plan">
+                    <h2>Премиум</h2>
+                    <p class="price-container"><span class="price">999</span>  <span class="tag">₽/мес</span></p>
+                    <p>Для максимального контроля здоровья</p>
+                    <button class="main-button">Начать</button>
+                    <div class="horizontal-line"></div>
+                    <div class="advantages-list"><p>Функции</p></div>
+                    <div class="advantages-list"><img src="../assets/done_icon.svg" class="done-icon"><p>Всё из «Стандарта»</p></div>
+                    <div class="advantages-list"><img src="../assets/done_icon.svg" class="done-icon"><p>Расширенный медпрофиль</p></div>
+                    <div class="advantages-list"><img src="../assets/done_icon.svg" class="done-icon"><p>Разбор анализов и рекомендации</p></div>
+                    <div class="advantages-list"><img src="../assets/done_icon.svg" class="done-icon"><p>Интеграция с фитнес-часам</p></div>
+                    <div class="advantages-list"><img src="../assets/done_icon.svg" class="done-icon"><p>Экспорт данных для врача</p></div>
+                </div>
+            </section>
+        
+            <!-- Таблица сравнения -->
+            <section class="table-section-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="functions">Функции</th>
+                            <th>
+                                <div class="plan-header">
+                                    <h3>Базовый</h3>
+                                    <p><span>0₽</span> в месяц</p>
+                                    <button class="main-button">Начать</button>
+                                </div>
+                            </th>
+                            <th class="popular-column">
+                                <div class="plan-header">
+                                    <h3>Стандарт</h3>
+                                    <p><span>499₽</span> в месяц</p>
+                                    <button class="main-button">Начать</button>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="plan-header">
+                                    <h3>Премиум</h3>
+                                    <p><span>999₽</span> в месяц</p>
+                                    <button class="main-button">Начать</button>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="functions">ИИ-чат</td>
+                            <td>10 запросов/день</td>
+                            <td>Безлимит</td>
+                            <td>Безлимит</td>
+                        </tr>
+                        <tr>
+                            <td class="functions">Дневник здоровья</td>
+                            <td>50 записей/мес</td>
+                            <td>Без ограничений</td>
+                            <td>Без ограничений</td>
+                        </tr>
+                        <tr>
+                            <td class="functions">Напоминания о препаратах</td>
+                            <td>2</td>
+                            <td>10</td>
+                            <td>Неограниченно</td>
+                        </tr>
+                        <tr>
+                            <td class="functions">Статистика</td>
+                            <td>Базовая</td>
+                            <td>Расширенная</td>
+                            <td>Расширенная + аналитика</td>
+                        </tr>
+                        <tr>
+                            <td class="functions">Персонализированные советы</td>
+                            <td></td>
+                            <td><img src="../assets/done_icon.svg" class="done-icon"></td>
+                            <td><img src="../assets/done_icon.svg" class="done-icon"></td>
+                        </tr>
+                        <tr>
+                            <td class="functions">Расширенный медпрофиль</td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="../assets/done_icon.svg" class="done-icon"></td>
+                        </tr>
+                        <tr>
+                            <td class="functions">Разбор анализов и рекомендации</td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="../assets/done_icon.svg" class="done-icon"></td>
+                        </tr>
+                        <tr>
+                            <td class="functions">Интеграция с фитнес-часами и экспорт данных</td>
+                            <td></td>
+                            <td></td>
+                            <td><img src="../assets/done_icon.svg" class="done-icon"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>                       
         </main>
 
-        <section class="info-section-container">
+        <section class="description-section-container">
+        </section>
 
+
+        <section class="faq-section-container">
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo-container">
+                    <div class="logo-container">
+                        <img class="logo-img" src="../assets/logo.png">
+                        <h5 class="project-name">medixy</h5>
+                    </div>
+                    <p class="logo-description">Ваш персональный ИИ-консультант<br>для медицинских вопросов.<br>Быстро, точно, конфиденциально.</p>
+                </div>
+                <div class="footer-nav-container">
+                    <uL>
+                        <li class="footer-header">Ресурсы</li>
+                        <li>О сервисе</li>
+                        <li>Политика конфиденциальности</li>
+                        <li>Документация</li>
+                    </uL>
+                    <uL>
+                        <li class="footer-header">Навигация</li>
+                        <li>Главная</li>
+                        <li>Дневник</li>
+                        <li>Подписка</li>
+                        <li>Лекарства</li>
+                    </uL>
+                </div>
             </div>
+            <p class="footer-text">Сервис носит исключительно информационный характер и не является медицинской консультацией.<br>Для постановки диагноза и назначения лечения обратитесь к квалифицированному врачу.<br>
+                © 2025 medixy. Все права защищены.</p>
+        </footer>
 
-        </section>
-
-        </section>
     </body>
-
-    <script>
-        document.getElementById("question").addEventListener("click", revealAnswer);
-
-        function revealAnswer() {
-
-        }
-    </script>
 </html>

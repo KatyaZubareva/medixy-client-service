@@ -1,0 +1,462 @@
+/* ===========================================
+   COMPONENTS.CSS
+   Все компонентные стили (кнопки, формы, меню, слайдеры, FAQ)
+   =========================================== */
+
+/* ===========================================
+   MENU COMPONENT
+   =========================================== */
+
+header {
+    font-size: 14px;
+    margin-bottom: 173px;
+    margin-top: 0;
+}
+
+.nav-container {
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background: rgba(17, 17, 18, 0.75);
+    position: fixed;
+    height: 80px;
+    padding: 0 20px 0 20px;
+    margin: 15px 130px 0 130px;
+    border: 1px solid #353536;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.3px);
+    -webkit-backdrop-filter: blur(13.3px);
+    z-index: 50;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    gap: 52px;
+}
+
+.nav-item {
+    white-space: nowrap;
+    line-height: 80px;
+    margin: 0;
+}
+
+.nav-item li {
+    margin: 0;
+}
+
+.nav-item a {
+    display: inline-block;
+    position: relative;
+    padding: 0 4px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-item a::after {
+    content: "";
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #8B5CF6, #7C3AED);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+.nav-item a.active::after {
+    width: 100%;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.project-name {
+    margin: 0;
+}
+
+/* ===========================================
+   BUTTONS COMPONENT
+   =========================================== */
+
+.main-button {
+    background: linear-gradient( #8B5CF6, #7C3AED);
+    box-shadow: inset 0 2px 0 #A78BFA;
+    color: #ffff;
+    border-radius: 8px;
+    border: 1px solid #5B21B6;
+    padding: 16px 14px;
+    min-width: 179px;
+    height: 48px;
+}
+
+.main-button:hover {
+    background: linear-gradient( #7C3AED, #6D28D9);
+    box-shadow: inset 0 2px 0 #8B5CF6;
+}
+
+.second-button {
+    color: #C4C4C4;
+    text-decoration: none;
+}
+
+.main-orange-button {
+    background: linear-gradient( #FB923C, #F97316);
+    box-shadow: inset 0 2px 0 #FED7AA;
+    color: #ffff;
+    border-radius: 8px;
+    border: 1px solid #9A3412;
+    padding: 16px 14px;
+    width: 179px;
+    height: 48px;
+}
+
+/* ===========================================
+   SLIDER COMPONENT
+   =========================================== */
+
+.slider-container {
+    width: 100%;
+    margin-top: 130px;
+}
+
+.slider {
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+
+.slider img {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    height: 27px; 
+    width: 100%;
+    margin-bottom: 75px;
+}
+
+.slider .list {
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+
+.slider .list .item {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 100s linear infinite;
+    animation-delay: calc((100s / var(--quantity)) * (var(--position) - 100));
+}
+
+.slider .list .item img {
+    width: 100%;
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    } to {
+        left: calc(var(--width) * -1)
+    }
+}
+
+.horizontal-line {
+    border-bottom: 1px solid #353536;
+    margin: 20px 0 20px 0;
+}
+
+.slider:hover .item {
+    animation-play-state: paused !important;
+}
+
+/* ===========================================
+   FORM COMPONENT
+   =========================================== */
+form {
+    width: 600px
+}
+
+.form-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 170px;
+    margin-bottom: 146px;
+}
+
+.form-section-container h1 {
+    margin-bottom: 15px;
+}
+
+.form-section-container button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.form-input-container {
+    text-align: left;
+}
+
+.form-text {
+    text-align: center;
+    margin-bottom: 10px;
+    max-width: 600px;
+}
+
+.form-input-container p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.form-input-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+textarea {
+    font-family: "Roboto", sans-serif;
+    transition: border 0.3s ease;
+    width: 100%;
+}
+
+textarea:focus {
+    outline: none;
+    border: 2px solid var(--main-color);
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1F1F1F;
+    border: 1px solid #353536;
+    border-radius: 2px;
+    width: 16px;
+    height: 16px;
+}
+
+label {
+    text-align: left;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 26px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #9AA1AF;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--main-color);
+}
+
+.checkmark:after {
+    content:"";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+/* ===========================================
+   FAQ COMPONENT
+   =========================================== */
+
+.faq-section-container {
+    margin-top: 128px; /* 128 + 47 = 175 */
+}
+
+.faq-section-container h1{
+    margin-bottom: 15px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+}
+
+.faq-img {
+    height: 327px;
+}
+
+.question {
+    margin-bottom: 12px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.question-btn {
+    cursor: pointer;
+    background: #181819;
+    color: #fff;
+    border: none;
+    padding: 14px 16px;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #F97316;
+    color: #fff;
+    padding: 0 16px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.question.active .answer {
+    max-height: 300px;
+    padding: 14px 16px;
+    background: #F97316;
+}
+
+.question.active .question-btn {
+    background: #F97316;
+}
+
+.question-img {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.question.active .question-img {
+    transform: rotate(45deg);
+}
+
+.faq-promo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+    height: 327px;
+    background: linear-gradient(#F97316, #181819 57%);
+    border: 1px solid #353536;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ===========================================
+   ROTATION EFFECT COMPONENT
+   =========================================== */
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+.banner .review-slider {
+    position: absolute;
+    width: 273px;
+    height: 143px;
+    top: 5%;
+    left: calc(50% - 130px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoSlide 20s linear infinite;
+    justify-content: center;
+    z-index: 2;
+}
+
+@keyframes autoSlide {
+    from {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    } to {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .review-slider .element {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--item-position) - 1) * (360 / var(--item-quantity)) * 1deg ))
+        translateZ(550px);
+}
+
+.banner .review-slider .element img {
+    width: 273px;
+    height: 143px;
+    object-fit: cover;
+}

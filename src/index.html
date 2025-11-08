@@ -3,318 +3,75 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Medixy</title>
+        
+        <!-- БАЗОВЫЕ НАСТРОЙКИ И ШРИФТЫ -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-        <style>
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-            /* Main */
+        <!-- СТИЛИ -->
+        <!-- Базовые стили -->
+        <link rel="stylesheet" type="text/css" href="../src/css/global.css">
+        
+        <!-- Компоненты -->
+        <link rel="stylesheet" type="text/css" href="../src/css/components.css">
+        
+        <!-- Секции -->
+        <link rel="stylesheet" type="text/css" href="../src/css/sections.css">
+        
+        <!-- Адаптивность -->
+        <link rel="stylesheet" type="text/css" href="../src/css/media.css">
 
-            body {
-                font-family: "Roboto", sans-serif;
-                background-color: #FAFBFC;
-                background-image: url('../../client-service/src/assets/bg.png');
-                background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: top;
-                color: #111827;
-            }
-
-            /* Text */
-
-            h1 {
-                font-size: 40px;
-                font-weight: 500;
-            }
-
-            h3 {
-                font-size: 16px;
-            }
-
-            h4 {
-                font-size: 16px;
-                font-weight: 500;
-                color: #fff;
-            }
-
-            h5 {
-                color: #fff;
-                font-weight: 200;
-                font-size: 24px;
-            }
-
-            p {
-                font-size: 16px;
-                color: #6B7280;
-            }
-
-            a {
-                text-decoration: none;
-                color: #C4C4C4;
-            }
-
-            a:hover {
-                color: #8B5CF6;
-            }
-
-            span {
-                color: #fff;
-            }
-
-            /* Header */
-
-            header {
-                font-size: 14px;
-                margin-bottom: 173px;
-                
-            }
-
-            .nav-container {
-                display: flex;
-                top: 0;
-                left: 0;
-                right: 0;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                margin-top: 27px;
-                margin-left: 48px;
-                margin-right: 48px;
-                padding: 18px 31px;
-                max-height: 81px;
-                border-radius: 8px;
-            }
-
-            .nav-menu {
-                display: flex;
-                justify-content: space-between;
-                list-style: none;
-            }
-
-            .nav-item {
-                margin-left: 50px;
-            }
-
-            .logo-img {
-                width: 45px;
-                height: 45px;
-                margin-right: 243px;
-            }
-
-            .nav-buttons {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                margin-left: 100px;
-                gap: 20px;
-            }
-
-            .logo-container {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-            }
-
-            /* Main section */
-
-            main h1 {
-                color: #fff;
-            }
-
-            main p {
-                color: #C4C4C4;
-            }
-
-            .main-screen-container {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 28px;
-                margin-bottom: 283px;
-            }
-
-            .main-content-container {
-                text-align: center;
-            }
-
-            .text-input-container {
-                gap: 15px;
-            }
-
-            .text-input {
-                border: 1px solid #E5E7EB;
-                border-radius: 8px;
-                padding: 16px 14px;
-                margin-right: 15px;
-                font-size: 16px;
-                color: #989DA6;
-            }
-
-            input {
-                width: 443px;
-                transition: border 0.3s ease;
-            }
-
-            input:focus {
-                outline: none;
-                border: 2px solid #8B5CF6;
-            }
-
-            .star-icon {
-                background: none;
-                border-radius: 0;
-                width: 17px;
-                height: 17px;
-            }
-
-            .partners-image {
-                width: 29px;
-                height: 29px;
-                border: 0px;
-                border-radius: 100px;
-            }
-
-            .partners-image-big {
-                width: 43px;
-                height: 43px;
-                border: 0px;
-                border-radius: 100px;
-            }
-
-            .stars-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .partners-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .vertical-line {
-                border-left: 1px solid #D9D9D9;
-            }
-
-            .info-container {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-            }
-
-            /* Buttons */
-
-            .main-button {
-                background-color: #8B5CF6;
-                color: #ffff;
-                border-radius: 8px;
-                border: none;
-                padding: 16px 14px;
-            }
-
-            .main-button:hover {
-                background-color: #713bef;
-            }
-
-            .second-button {
-                color: #C4C4C4;
-                text-decoration: none;
-            }
-
-            /* Info section */
-            .info-section-container {
-                margin-bottom: 153px;
-            }
-
-            .info-section {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                gap: 41px;
-            }
-
-            .info-block {
-                background-color: #ffff;
-                border-radius: 8px;
-                padding: 10px;
-                font-size: 16px;
-                height: 364px;
-                width: 267px;
-            }
-
-            .info-more {
-                color: #F5750D;
-            }
-
-            img {
-                background-color: #E0D5FC;
-                border: 0px;
-                border-radius: 8px;
-                width: 100%;
-                height: 194px;
-                object-fit: cover;
-            }
-
-            /* Description section */
-
-            .description-container {
-                padding-left: 278px;
-                padding-right: 278px;
-
-            }
-
-            .xray-image {
-                width: 262px;
-                height: 295px;
-            }
-
-
-
-            /* FAQ section */
-
-            .faq-section-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .faq-tag {
-                background-color: #E4DBFB;
-                border: 1px solid #8B5CF6;
-                border-radius: 8px;
-                padding: 5px 20px;
-                color: #8B5CF6;
-            }
-        </style>
+        <!-- СКРИПТЫ -->
+        <!-- Главный скрипт приложения -->
+        <script src="../src/js/main.js" defer></script>
     </head>
-    <body>
+
+    <body class="main-page">
         <header>
             <nav class="nav-container">
                 <div class="logo-container">
                     <img class="logo-img" src="../../client-service/src/assets/logo.png">
                     <h5 class="project-name">medixy</h5>
                 </div>
+
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="../src/index.html">Главная</a></li>
-                    <li class="nav-item"><a href="../src/pages/diary.html">Дневник</a></li>
+                    <li class="nav-item"><a href="../src/index.html" class="active">Главная</a></li>
+                    <li class="nav-item"><a href="../src/pages/about.html">О нас</a></li>
+                    <li class="nav-item"><a href="../src/pages/possibilities.html">Возможности</a></li>
                     <li class="nav-item"><a href="../src/pages/subsribtion.html">Подписка</a></li>
-                    <li class="nav-item"><a href="../src/pages/medications.html">Лекарства</a></li>
                 </ul>
+
                 <div class="nav-buttons">
-                    <a class="second-button">Войти</a>
-                    <button class="main-button">Регистрация</button>
+                    <a href="../src/pages/login.html" class="second-button">Войти</a>
+                    <button class="main-button" onclick="window.location.href='../src/pages/registration.html'">Регистрация</button>
                 </div>
+
+                <img class="mobile-menu" src="../../client-service/src/assets/Mobile-menu.svg">
             </nav>
+
+            <div class="mobile-nav">
+                <ul class="mobile-menu-list">
+                    <li><a href="../src/index.html">Главная</a></li>
+                    <li><a href="../src/pages/about.html">О нас</a></li>
+                    <li><a href="../src/pages/possibilities.html">Возможности</a></li>
+                    <li><a href="../src/pages/subsribtion.html">Подписка</a></li>
+                </ul>
+                <div class="mobile-buttons">
+                    <a href="../src/pages/login.html" class="second-button">Войти</a>
+                    <button class="main-button" onclick="window.location.href='registration.html'">Регистрация</button>
+                </div>
+            </div>              
+            
         </header>
 
         <main>
             <div class="main-screen-container">
                 <div class="main-content-container">
-                    <h1>Твой медицинский <span>ИИ-консультант</span></h1>
-                    <p>Получите моментальную консультацию по вашим симптомам с помощью<br>
-                    нашего ИИ-ассистента. Точные ответы, персонализированные<br>
+                    <h1>Твой медицинский ИИ-консультант</h1>
+                    <p>Получите моментальную консультацию по вашим симптомам с помощью
+                    нашего ИИ-ассистента. Точные ответы, персонализированные
                     рекомендации и круглосуточная поддержка.</p>
                     <div class="text-input-container">
                         <input class="text-input" placeholder="Опишите ваши симптомы...">
@@ -322,17 +79,17 @@
                     </div>
                 </div>
                 <div class="info-container">
-                    <div class="partners-container">
-                        <h4>Партнеры</h4>
-                        <div class="partners">
-                            <img class="partners-image">
-                            <img class="partners-image-big">
-                            <img class="partners-image">
-                        </div>
+                    <div class="main-info-text">
+                        <p>4.8 тыс. +</p>
+                        <p>Рейтинг</p>
                     </div>
-                    <div class="vertical-line"></div>
-                    <div class="stars-container">
-                        <h4>Рейтинг</h4>
+                    <div class="main-info-container">
+                        <div class="partners">
+                            <img class="partners-image" src="../src/assets/man-img.png">
+                            <img class="partners-image-big" src="../src/assets/woman-img.png">
+                            <img class="partners-image" src="../src/assets/man2-img.png">
+                        </div>
+                        <div class="vertical-line"></div>
                         <div class="stars">
                             <img class="star-icon" src="../src/assets/star.svg">
                             <img class="star-icon" src="../src/assets/star.svg">
@@ -342,89 +99,275 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        
 
+                <div class="slider-container">
+                    <div class="horizontal-line"></div>
+                    <div class="slider" style="--width: 1180px; --height: 27px; --quantity: 9">
+                        <div class="list">
+                            <div class="item" style="--position: 1;"><img src="../src/assets/item-1.svg"></div>
+                            <div class="item" style="--position: 2;"><img src="../src/assets/item-2.svg"></div>
+                            <div class="item" style="--position: 3;"><img src="../src/assets/item-3.svg"></div>
+                            <div class="item" style="--position: 4;"><img src="../src/assets/item-1.svg"></div>
+                            <div class="item" style="--position: 5;"><img src="../src/assets/item-2.svg"></div>
+                            <div class="item" style="--position: 6;"><img src="../src/assets/item-3.svg"></div>
+                            <div class="item" style="--position: 7;"><img src="../src/assets/item-1.svg"></div>
+                            <div class="item" style="--position: 8;"><img src="../src/assets/item-2.svg"></div>
+                            <div class="item" style="--position: 9;"><img src="../src/assets/item-3.svg"></div>
+                        </div>
+                    </div>
+                    <div class="horizontal-line"></div>
+                </div>
+            </div>
         </main>
 
         <section class="info-section-container">
 
-            <div class="info-section">
-                <div class="info-block">
-                    <img src="../src/assets/1.png">
-                    <h3>Анализ симптомов</h3>
-                    <p>Получите предварительную оценку вашего состояния на основе введенных симптомов</p>
-                    <p class="info-more">Подробнее</p>
-                
-                </div>
-
-                <div class="info-block">
-                    <img src="../src/assets/8.png">
-                    <h3>Дневник здоровья</h3>
-                    <p>Систематически отслеживайте показатели здоровья и самочувствия</p>
-                    <p class="info-more">Подробнее</p>
-                
-                </div>
-
-                <div class="info-block">
-                    <img src="../src/assets/2.png">
-                    <h3>Проверка лекарств</h3>
-                    <p>Узнайте о взаимодействиях препаратов и возможных побочных эффектах</p>
-                    <p class="info-more">Подробнее</p>
-                
-                </div>
+            <img class="health-care-img" src="../src/assets/photo1.png">
+            <div>
+                <h1 class="autoShow">Готовы начать заботиться о своем здоровье?</h1>
+                <p class="info-text">Наш медицинский ИИ-ассистент и команда поддержки всегда готовы помочь вам: уточнить функции, подсказать, какой тариф подходит именно вам, и ответить на любые вопросы о здоровье.</p>
+                <div class="advantages-list"><img src="../src/assets/done_icon.svg" class="done-icon"><p>Круглосуточная поддержка</p></div>
+                <div class="advantages-list"><img src="../src/assets/done_icon.svg" class="done-icon"><p>Персональные рекомендации</p></div>
+                <div class="advantages-list"><img src="../src/assets/done_icon.svg" class="done-icon"><p>Напоминания о приеме лекарств</p></div>
+                <button class="main-orange-button">Присоединиться</button>
             </div>
 
         </section>
 
-        <section class="description-container">
-            <img class="xray-image" src="../../client-service/src/assets/umanoide-nYTeLW-RiyU-unsplash.png">
-            <div>
-                <h2>Как это работает?</h2>
-                <p>Опишите проблему – напишите симптомы или задайте вопрос.</p>
-                <p>Получите анализ – ИИ проверит данные, проанализирует медицинские источники и даст понятный ответ.</p>
-                <p>Следующие шаги – рекомендации и советы, как действовать дальше.</p>
+        <section class="description-section-container">
+            <div class="description-container">
+                <div class="tag about-product">О ПРОДУКТЕ</div>
+                <h1 class="autoShow">Как это работает?</h1>
+                <p class="description-text">Наш медицинский ИИ-ассистент и команда поддержки всегда готовы помочь вам: уточнить функции, подсказать, какой тариф подходит именно вам, и ответить на любые вопросы о здоровье.</p>
+                <div class="step-">
+                    <div class="step-container">
+                        <img class="step-img" src="../src/assets/first-step.svg">
+                        <div class="step-text">
+                            <h4>Шаг №1</h4>
+                            <p>Опишите проблему – напишите симптомы или задайте вопрос.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-container">
+                        <img class="step-img" src="../src/assets/second-step.svg">
+                        <div class="step-text">
+                            <h4>Шаг №2</h4>
+                            <p>ИИ анализирует ваши симптомы, учитывая более 100 факторов.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-container last-item">
+                        <img class="step-img" src="../src/assets/third-step.svg">
+                        <div class="step-text">
+                            <h4>Шаг №3</h4>
+                            <p>Получите понятные рекомендации: возможные причины симптомов, советы по  самопомощи.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <img class="phone-img" src="../src/assets/photo2.png">
         </section>
 
 
         <section class="faq-section-container">
 
-            <div class="faq-section">
-                <div class="question">
-                    <h2 id="question">Что умеет медицинский ассистент?</h2>
-                    <p id="answer">Помогает с симптомами, дает общие рекомендации, напоминает о приеме лекарств, но не заменяет врача.</p>
+            <h1>Что нужно знать?</h1>
+            <div class="faq-container">
+                <div class="faq-promo-block">
+                    <div class="tag-orange">СОЗДАЙ АККАУНТ</div>
+                    <h1>Начните прямо сейчас</h1>
+                    <p>Регистрация займет менее 2 минут, и вы сразу получите доступ к базовым функциям</p>
                 </div>
+                <div>
+                    <div class="faq-section">
+                        <div class="question">
+                            <button class="question-btn">Что умеет медицинский ассистент?<img class="question-img" src="../src/assets/plus.svg"></button>
+                            <div class="answer">Помогает с симптомами, дает общие рекомендации, напоминает о приеме лекарств, но не заменяет врача.</div>
+                        </div>
+        
+                        <div class="question">
+                            <button class="question-btn">Как пользоваться ассистентом?<img class="question-img" src="../src/assets/plus.svg"></button>
+                            <div class="answer">Просто введите вопрос (например, "Что делать при высокой температуре?") или выберите тему из меню.</div>
+                        </div>
+        
+                        <div class="question">
+                            <button class="question-btn">Насколько точны ответы ассистента?<img class="question-img" src="../src/assets/plus.svg"></button>
+                            <div class="answer">Ответы основаны на проверенных медицинских источниках, но для диагноза и лечения всегда консультируйтесь с врачом.</div>
+                        </div>
+        
+                        <div class="question">
+                            <button class="question-btn">Хранятся ли мои данные?<img class="question-img" src="../src/assets/plus.svg"></button>
+                            <div class="answer">Нет, мы не сохраняем ваши персональные данные и историю обращений.</div>
+                        </div>
 
-                <div class="question">
-                    <h2 id="question">Как пользоваться ассистентом?</h2>
-                    <p id="answer">Просто введите вопрос (например, "Что делать при высокой температуре?") или выберите тему из меню.</p>
-                </div>
-
-                <div class="question">
-                    <h2 id="question">Насколько точны ответы ассистента?</h2>
-                    <p id="answer">Ответы основаны на проверенных медицинских источниках, но для диагноза и лечения всегда консультируйтесь с врачом.</p>
-                </div>
-
-                <div class="question">
-                    <h2 id="question">Хранятся ли мои данные?</h2>
-                    <p id="answer">Нет, мы не сохраняем ваши персональные данные и историю обращений.</p>
+                        <div class="question">
+                            <button class="question-btn">Хранятся ли мои данные?<img class="question-img" src="../src/assets/plus.svg"></button>
+                            <div class="answer">Нет, мы не сохраняем ваши персональные данные и историю обращений.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </section>
 
+        <section class="form-section-container">
+            <div class="tag">СВЯЖИТЕСЬ С НАМИ</div>
+            <h1>Остались вопросы?</h1>
+            <p class="form-text">Наш медицинский ИИ-ассистент и команда поддержки всегда готовы помочь вам: уточнить функции, подсказать, какой тариф подходит именно вам, и ответить на любые вопросы о здоровье.</p>
+
+            <form>
+                <div class="form-input-container">
+                    <p>Имя</p>
+                    <input type="text" class="text-input" name="name" placeholder="Имя" required>
+                </div>
+                <div class="form-input-container">
+                    <p>Почта</p>
+                    <input type="email" class="text-input" name="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-input-container">
+                    <p>Сообщение</p>
+                    <textarea class="text-input" name="message" rows="4" placeholder="Напишите ваш вопрос..." required></textarea>
+                </div>
+                <div class="agreement-container">
+                    <label class="checkbox-container">Я согласен на обработку персональных данных
+                        <input type="checkbox" id="checkbox" name="agreement" required>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <button type="submit" class="main-button" id="submit_button">Связаться с нами</button>
+            </form>
+            
+
+        </section>
+
         <footer>
-            <div class="line"></div>
+            <div class="footer-container">
+                <div class="footer-logo-container">
+                    <div class="logo-container">
+                        <img class="logo-img" src="../../client-service/src/assets/logo.png">
+                        <h5 class="project-name">medixy</h5>
+                    </div>
+                    <p class="logo-description">Ваш персональный ИИ-консультант для медицинских вопросов. Быстро, точно, конфиденциально.</p>
+                </div>
+                <div class="footer-nav-container">
+                    <uL>
+                        <li class="footer-header">Ресурсы</li>
+                        <li>О сервисе</li>
+                        <li>Политика конфиденциальности</li>
+                        <li>Документация</li>
+                    </uL>
+                    <uL>
+                        <li class="footer-header">Навигация</li>
+                        <li>Главная</li>
+                        <li>Дневник</li>
+                        <li>Подписка</li>
+                        <li>Лекарства</li>
+                    </uL>
+                </div>
+            </div>
+            <p class="footer-text">Сервис носит исключительно информационный характер и не является медицинской консультацией.<br>Для постановки диагноза и назначения лечения обратитесь к квалифицированному врачу.<br>
+                © 2025 medixy. Все права защищены.</p>
         </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const mobileNav = document.querySelector('.mobile-nav');
 
+            if (mobileMenuBtn && mobileNav) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileNav.classList.toggle('active');
+                });
+            }
+        });
+
+
+            /* Form */
+
+            document.addEventListener('DOMContentLoaded', () => {
+            const form = document.querySelector('form');
+            const submitButton = document.querySelector('#submit_button');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault(); // Останавливаем стандартное поведение формы
+
+                // Собираем данные формы
+                const name = form.querySelector('input[name="name"]').value.trim();
+                const email = form.querySelector('input[name="email"]').value.trim();
+                const message = form.querySelector('textarea[name="message"]').value.trim();
+                const agreement = form.querySelector('input[name="agreement"]').checked;
+
+                // Валидация
+                if (!name) {
+                    alert('Введите ваше имя.');
+                    return;
+                }
+
+                if (!validateEmail(email)) {
+                    alert('Введите корректный email.');
+                    return;
+                }
+
+                if (message.length < 10) {
+                    alert('Сообщение должно быть не менее 10 символов.');
+                    return;
+                }
+
+                if (!agreement) {
+                    alert('Вы должны согласиться на обработку персональных данных.');
+                    return;
+                }
+
+                const formData = { name, email, message, agreement };
+
+                try {
+                    const response = await fetch('https://helios.se.ifmo.ru/~s336584/form-handler.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)
+                    });
+
+                    if (response.ok) {
+                        alert('Ваше сообщение отправлено!');
+                        form.reset();
+                    } else {
+                        alert('Произошла ошибка при отправке формы. Попробуйте снова.');
+                    }
+                } catch (error) {
+                    console.error(error);
+                    alert('Ошибка сети. Попробуйте позже.');
+                }
+            });
+
+            function validateEmail(email) {
+                // Простейшая проверка формата email
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+            });
+
+            /* FAQ */
+            document.addEventListener("DOMContentLoaded", () => {
+            const questions = document.querySelectorAll(".question");
+
+            questions.forEach((question) => {
+                const btn = question.querySelector(".question-btn");
+
+                btn.addEventListener("click", () => {
+                    if (question.classList.contains("active")) {
+                        question.classList.remove("active");
+                        return;
+                    }
+
+                    questions.forEach((q) => q.classList.remove("active"));
+
+                    question.classList.add("active");
+                });
+            });
+        });
+
+
+        </script>
     </body>
-
-    <script>
-        document.getElementById("question").addEventListener("click", revealAnswer);
-
-        function revealAnswer() {
-
-        }
-    </script>
 </html>
